@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="wallet">
+        <div class="d-flex justify-content-between mb-5">
+            <h4> Current Balance </h4>
+            <h4>₹ {{userService.currentUser.Balance}}</h4>
+        </div>
+        <div>
+            <input type="text" pattern="[0-9]+" minlength="2" maxlength="4" placeholder="Enter Amount"
+                class="form-control mb-3" title="Please enter only numbers" #input (keypress)=validateInput($event)>
+            <button class="btn btn-info w-100" (click)=recharge(input)>Add Money</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,92 @@
+{
+  "profile": [{
+    "id": "TV_USER_1",
+    "FirstName": "Antonia",
+    "LastName": "Lomasney",
+    "Email": "alomasney0@etsy.com",
+    "Phone": "9988776655",
+    "Balance": 100,
+    "CurrentSubscription": {
+      "Packs": [
+        2
+      ],
+      "Channels": [
+        1,
+        3,
+        5,
+        2
+      ],
+      "Services": []
+    }
+  }],
+  "Packs": [{
+      "id": 1,
+      "name": "Silver pack",
+      "channels": "Zee, Sony, Star Plus",
+      "price": 50
+    },
+    {
+      "id": 2,
+      "name": "Gold Pack",
+      "channels": "Zee, Sony, Star Plus, Discovery, NatGeo",
+      "price": 100
+    }
+  ],
+  "Channels": [{
+      "id": 1,
+      "name": "Big",
+      "price": 3
+    },
+    {
+      "id": 2,
+      "name": "Colors",
+      "price": 5
+    },
+    {
+      "id": 3,
+      "name": "Sony",
+      "price": 6
+    },
+    {
+      "id": 4,
+      "name": "9x",
+      "price": 4
+    },
+    {
+      "id": 5,
+      "name": "B4U",
+      "price": 1
+    },
+    {
+      "id": 6,
+      "name": "Housefull",
+      "price": 1
+    },
+    {
+      "id": 7,
+      "name": "Manoranjan",
+      "price": 1
+    },
+    {
+      "id": 8,
+      "name": "9XM",
+      "price": 3
+    },
+    {
+      "id": 9,
+      "name": "Bindass",
+      "price": 5
+    }
+  ],
+  "Services": [{
+      "id": 1,
+      "name": "Learn English",
+      "price": 100
+    },
+    {
+      "id": 2,
+      "name": "Games",
+      "price": 150
+    }
+  ]
+}

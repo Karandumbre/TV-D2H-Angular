@@ -1,0 +1,48 @@
+<ul class="price">
+    <li class="header" [ngClass]="{'gold': data.name === 'Gold Pack'}">{{data.name}}</li>
+    <li class="grey">₹ {{data.price}} / month</li>
+    <li *ngIf="data.channels">{{data.channels}}</li>
+    <li class="grey" *ngIf="!hideSubscribeButton">
+        <!-- <button class="btn btn-success w-75" (click)='subcribe(data.id)'>Subscribe</button> -->
+        <button class="btn btn-success w-75" data-toggle="modal" [attr.data-target]="'#' + drawerId"
+            (click)='checkSubscription()'>Subscribe</button>
+
+    </li>
+</ul>
+
+
+
+<!-- Modal -->
+<div *ngIf="openModal" class="modal fade" [attr.id]="drawerId" tabindex="-1" role="dialog" #content
+    [attr.aria-labelledby]="drawerId + 'Label'" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" [attr.id]="drawerId + 'Label'">Current Selection: {{data.name}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container" style="background-color:white">
+                    <h6><b>10% instant Discount for more than 2 months subscription</b></h6>
+                    <p class="my-3">Monthly Rate: {{data.price}}</p>
+                    <p class="my-3">Subscribe
+                        <button class="btn btn-warning mr-3" (click)='subtract()'>-</button>
+                        <input type="number" value="1" min="1" maxlength="2" minlength="1" max="12" [(ngModel)]="months"
+                            readonly>
+                        <button class="btn btn-warning ml-3" (click)='add()'>+</button> Months</p>
+
+                    <h6>Your total: <b>{{totalPrice}}</b></h6>
+
+                    <h6 *ngIf="discountedPrice">Discounted Price: <b>{{discountedPrice}}</b></h6>
+                </div>
+
+            </div>
+            <div class="modal-footer justify-content-between">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" #closeModal>Close</button>
+                <button type="button" class="btn btn-primary" (click)='subcribe()'>Subscribe</button>
+            </div>
+        </div>
+    </div>
+</div>

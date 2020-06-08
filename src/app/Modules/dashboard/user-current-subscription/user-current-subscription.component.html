@@ -1,0 +1,34 @@
+<h1>Current Subscription</h1>
+
+<div class="container-fluid">
+
+    <p *ngIf="userData?.Packs.length > 0" class="packs heading text-uppercase text-center mt-4">Packs</p>
+    <div class="row justify-content-center">
+        <ng-container *ngFor="let item of userData?.Packs">
+            <div class="card card-body col-12 col-md-6">
+                <app-dth-card [data]='item' [hideSubscribeButton]='true'>
+                </app-dth-card>
+            </div>
+        </ng-container>
+    </div>
+    <p *ngIf="userData?.Channels.length > 0" class="channels heading text-uppercase text-center mt-4">Channels</p>
+    <div class="row justify-content-center">
+        <ng-container *ngFor="let item of userData?.Channels">
+            <div class="card card-body col-12 col-md-5 mr-md-4 mb-2">
+                <app-dth-card [data]='item' [hideSubscribeButton]='true'>
+                </app-dth-card>
+            </div>
+        </ng-container>
+    </div>
+
+    <p *ngIf="userData?.Services.length > 0" class="dthservice heading text-uppercase text-center mt-4">Services</p>
+    <div class="row justify-content-center">
+        <ng-container *ngFor="let item of userData?.Services">
+            <div class="card card-body col-12 col-md-6">
+                <app-dth-card [data]='item' [hideSubscribeButton]='true'>
+                </app-dth-card>
+            </div>
+        </ng-container>
+    </div>
+
+</div>

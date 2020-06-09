@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DthCardComponent } from './dth-card.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('DthCardComponent', () => {
   let component: DthCardComponent;
@@ -8,9 +10,9 @@ describe('DthCardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DthCardComponent ]
-    })
-    .compileComponents();
+      imports: [FormsModule, HttpClientTestingModule],
+      declarations: [DthCardComponent]
+    });
   }));
 
   beforeEach(() => {

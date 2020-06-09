@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RechargeComponent } from './recharge.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('RechargeComponent', () => {
   let component: RechargeComponent;
@@ -8,9 +9,9 @@ describe('RechargeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RechargeComponent ]
-    })
-    .compileComponents();
+      imports: [HttpClientTestingModule],
+      declarations: [RechargeComponent]
+    });
   }));
 
   beforeEach(() => {

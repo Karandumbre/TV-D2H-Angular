@@ -7,7 +7,11 @@ import { UserService } from './../../Services/user.service';
   styleUrls: ['./dth-card.component.scss']
 })
 export class DthCardComponent implements OnInit {
-  @Input() data: any;
+  @Input() data = {
+    id: '',
+    name: '',
+    price: 0
+  };
   @Input() type = 'Packs';
   @Input() hideSubscribeButton = false;
   @Input() drawerId = 'default';

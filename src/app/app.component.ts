@@ -7,7 +7,7 @@ import { UserService } from './Common/Services/user.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'TechVerito D2H';
+  title = 'TvD2HAssignment';
   constructor(private userService: UserService) { }
 
   ngOnInit() {

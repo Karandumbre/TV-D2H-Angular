@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UserCurrentSubscriptionComponent } from './user-current-subscription.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DthCardComponent } from './../../../Common/Components/dth-card/dth-card.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('UserCurrentSubscriptionComponent', () => {
   let component: UserCurrentSubscriptionComponent;
@@ -8,9 +12,9 @@ describe('UserCurrentSubscriptionComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [UserCurrentSubscriptionComponent]
-    })
-      .compileComponents();
+      imports: [FormsModule, ReactiveFormsModule, HttpClientTestingModule, RouterTestingModule],
+      declarations: [UserCurrentSubscriptionComponent, DthCardComponent]
+    });
   }));
 
   beforeEach(() => {

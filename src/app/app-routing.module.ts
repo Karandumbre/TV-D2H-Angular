@@ -5,7 +5,8 @@ import { DashboardComponent } from './Modules/dashboard/dashboard.component';
 import { UserCurrentSubscriptionComponent } from './Modules/dashboard/user-current-subscription/user-current-subscription.component';
 import { RechargeComponent } from './Modules/dashboard/recharge/recharge.component';
 import { DTHComponent } from './Modules/dth/dth.component';
-const routes: Routes = [{
+
+export const routes: Routes = [{
   path: '',
   redirectTo: 'DTH',
   pathMatch: 'full'

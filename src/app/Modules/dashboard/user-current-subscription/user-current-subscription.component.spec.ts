@@ -14,7 +14,7 @@ describe('UserCurrentSubscriptionComponent', () => {
     TestBed.configureTestingModule({
       imports: [FormsModule, ReactiveFormsModule, HttpClientTestingModule, RouterTestingModule],
       declarations: [UserCurrentSubscriptionComponent, DthCardComponent]
-    });
+    }).compileComponents();
   }));
 
   beforeEach(() => {

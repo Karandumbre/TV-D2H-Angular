@@ -22,7 +22,7 @@ export class UserService {
       Channels: []
     }
   };
-  constructor(private http: HttpClient, private httpService: HttpService) { }
+  constructor(private httpService: HttpService) { }
 
   refreshData() {
     this.refresh.next('refresh');

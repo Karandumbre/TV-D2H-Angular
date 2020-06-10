@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { DTHComponent } from './dth.component';
 import { DthCardComponent } from './../../Common/Components/dth-card/dth-card.component';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 describe('DTHComponent', () => {
   let component: DTHComponent;
@@ -12,7 +13,7 @@ describe('DTHComponent', () => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
       declarations: [DTHComponent, DthCardComponent]
-    });
+    }).compileComponents();
   }));
 
   beforeEach(() => {

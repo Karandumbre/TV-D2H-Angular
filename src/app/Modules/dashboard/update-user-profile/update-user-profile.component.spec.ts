@@ -15,7 +15,7 @@ describe('UpdateUserProfileComponent', () => {
         RouterTestingModule, HttpClientTestingModule, FormsModule, ReactiveFormsModule
       ],
       declarations: [UpdateUserProfileComponent]
-    });
+    }).compileComponents();
   }));
 
   beforeEach(() => {
